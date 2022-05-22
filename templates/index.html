@@ -1,0 +1,51 @@
+
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./templates/style.css') }}" xmlns="http://www.w3.org/1999/html">
+
+
+<div class="login-box">
+  <h2>Spline Visualizing Service</h2>
+  <form action="/report" method="post" autocomplete="off" enctype=multipart/form-data>
+    <div class="user-box">
+      <input type="text" name="knots" required>
+      <label>Knots (t):</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="coefficients" required>
+      <label>Coefficients (c):</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="curvedegree" required>
+      <label>Curve degree (k):</label>
+    </div>
+      <div class="user-box">
+      <input type=file name=file>
+    </div>
+    {% if x == 2 %}
+    <div class="user-box">
+        <label >
+         An unexpected error ocurred
+        </label>
+    </div>
+    {%endif%}
+    <button type="submit" name="submit" value="add">
+      Submit
+    </button>
+  </form>
+</div>
+
+
+{% if x == 1 %}
+<div class="report">
+    <h2>Telescopic operational amplifier.</h2>
+    <div class="figure">
+        <center>
+    <img src="{{ url_for('static', filename='./images/result.png') }}">
+        </center>
+        </div>
+    <div class="legend">
+        Figure 1: Telescopic operational amplifier
+    </div>
+</div>
+{%endif%}
