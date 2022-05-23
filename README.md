@@ -29,4 +29,4 @@ The frontend allows the user to see the results like this:
 ![image](https://user-images.githubusercontent.com/86535567/169724482-130e3de3-07bf-4e8a-b5a4-bbabf59ee62f.png)
 
 
-
+To develop this project I implemented the Flask framework, OpenCV, Matplotlib. 
