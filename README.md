@@ -1,6 +1,6 @@
 # Edges visualization service.
 
-In this project I developed an API that take an image and 2 parameters as inputs and visualize the edges of the image.
+In this project I developed an API that takes an image and 2 parameters as inputs and visualize the edges of the image.
 
 To do that, I implemented the Canny algorithm, that is available on OpenCV, and designed this user interface in HTML/CSS: 
 
