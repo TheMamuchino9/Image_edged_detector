@@ -5,19 +5,15 @@
 
 
 <div class="login-box">
-  <h2>Spline Visualizing Service</h2>
+  <h2>Edges Visualizing Service</h2>
   <form action="/report" method="post" autocomplete="off" enctype=multipart/form-data>
     <div class="user-box">
-      <input type="text" name="knots" required>
-      <label>Knots (t):</label>
+      <input type="text" name="maxvalue" required>
+      <label>Max value:</label>
     </div>
     <div class="user-box">
-      <input type="text" name="coefficients" required>
-      <label>Coefficients (c):</label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="curvedegree" required>
-      <label>Curve degree (k):</label>
+      <input type="text" name="minvalue" required>
+      <label>Min value:</label>
     </div>
       <div class="user-box">
       <input type=file name=file>
@@ -38,14 +34,22 @@
 
 {% if x == 1 %}
 <div class="report">
-    <h2>Telescopic operational amplifier.</h2>
+    <h2>Canny Edge Detection</h2>
+    <div class="figure">
+        <center>
+    <img src="{{ url_for('static', filename='./images/{}'.format(image)) }}">
+        </center>
+        </div>
+    <div class="legend">
+        Figure 1: Original image.
+    </div>
     <div class="figure">
         <center>
     <img src="{{ url_for('static', filename='./images/result.png') }}">
         </center>
         </div>
     <div class="legend">
-        Figure 1: Telescopic operational amplifier
+        Figure 2: Image with edges detected.
     </div>
 </div>
 {%endif%}
